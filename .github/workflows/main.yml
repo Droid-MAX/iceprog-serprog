@@ -57,14 +57,7 @@ jobs:
           cp -rf ./build/x86 ./artifact/
           cp -rf ./build/x64 ./artifact/
 
-      # step5: Deliver Package
-      - name: Deliver Package
-        uses: actions/upload-artifact@v2
-        with:
-          name: iceprog-serprog
-          path: ./artifact/
-
-      # step6: Create Release
+      # step5: Create Release
       - name: Create Release
         uses: svenstaro/upload-release-action@v2
         with:
